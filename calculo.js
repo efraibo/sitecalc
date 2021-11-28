@@ -1,11 +1,12 @@
-function test() {
-    let a = document.getElementById("A").value;
-    let b = document.getElementById("B").value;
-    let c = document.getElementById("C").value;
-    let d = document.getElementById("D").value;
+function calculo() {
+    let a = parseInt(document.getElementById("A").value);
+    let b = parseInt(document.getElementById("B").value);
+    let c = parseInt(document.getElementById("C").value);
+    let d = parseInt(document.getElementById("D").value);
 
-    let calculo = (a + b / 2) * (c + d / 2);
-    var f = calculo.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'});
+    let calculoCubo = ((a + b) / 2) * ((c + d) / 2);
+    let valorPago = calculoCubo * (3 * 0.17);
+    let valor = valorPago.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'});
 
-    alert(f);
+    alert(valor);
 }
