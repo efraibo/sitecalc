@@ -1,6 +1,8 @@
 function calculo() {
-    const qtdTonelada = 3;
+    // const qtdTonelada = 3;
     const valorPorCubo = 0.17;
+
+    let qtdTonelada = parseFloat(document.getElementById("qtdTonelada").value);
 
     let a = parseFloat(document.getElementById("A").value);
     let b = parseFloat(document.getElementById("B").value);
@@ -14,7 +16,7 @@ function calculo() {
         let valorPago = calculoCubo * (qtdTonelada * valorPorCubo);
         let valor = valorPago.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'});
            
-        alert("O valor a ser pago é: " + valor);
+        alert("O valor da cubação é: " + calculoCubo + "\nO valor a ser pago é: " + valor);        
     }
 
 }
