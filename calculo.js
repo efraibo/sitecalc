@@ -7,11 +7,16 @@ function calculo() {
     let c = parseFloat(document.getElementById("C").value);
     let d = parseFloat(document.getElementById("D").value);
 
-    let calculoCubo = ((a + b) / 2) * ((c + d) / 2);
-    let valorPago = calculoCubo * (qtdTonelada * valorPorCubo);
-    let valor = valorPago.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'});
-       
-    alert("O valor a ser pago é: " + valor);    
+    if (isNaN(a) || isNaN(b) || isNaN(c) || isNaN(d)) {
+        alert("Existe algum campo não preenchido!")
+    } else {
+        let calculoCubo = ((a + b) / 2) * ((c + d) / 2);
+        let valorPago = calculoCubo * (qtdTonelada * valorPorCubo);
+        let valor = valorPago.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'});
+           
+        alert("O valor a ser pago é: " + valor);
+    }
+
 }
 
 
