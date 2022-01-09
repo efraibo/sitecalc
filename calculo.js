@@ -1,6 +1,6 @@
 function calculo() {
     // const qtdTonelada = 3;
-    const valorPorCubo = 0.17;
+    const valorPorCubo = 0.18;
 
     let qtdTonelada = parseFloat(document.getElementById("qtdTonelada").value);
 
